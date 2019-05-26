@@ -274,12 +274,12 @@ If you are not already there, open the WKS tool.
 <br/><img src="images/WKSCreateAnnotationSet.png" alt="WKSCreateAnnotationSet" width="640" border="10" /><br/><br/>
 - Select yourself as the annotator and type in name for the annotation set and click `Generate`<br/>
 <br/><img src="images/WKSAnnotationGenerate.png" alt="WKSAnnotationGenerate" width="640" border="10" /><br/><br/>
-- Annotation set is created and the `Annotation Sets` tab is presented.
+- Annotation set is created and the `Annotation Sets` tab is presented.<br/>
 <br/><img src="images/WKSAnnotationCreated.png" alt="WKSAnnotationCreated" width="640" border="10" /><br/><br/>
 
 
 ### 4.6 Human Annotation
-- Click the link to the `Human Annotation task` or navigate to the `Annotation Tasks` menu under `Machine Learning Model` in the left menu. A new screen is presented.
+- Click the link to the `create a task on the Annotation Tasks page.` or navigate to the `Annotation Tasks` menu under `Machine Learning Model` in the left menu. A new screen is presented.
 - Click `Add Task`<br/>
 <br/><img src="images/WKSAddTask.png" alt="WKSAddTask" width="640" border="10" /><br/><br/>
 - Enter a name for the task and click `Create`<br/>
@@ -298,11 +298,12 @@ If you are not already there, open the WKS tool.
 - From the documents select an entry that you want to be extracted from the document as entities. Then click on the entity type on the right hand side of the screen
 - Similarly do this for all the keywords in the document.<br/>
 <br/><img src="images/WKSEntityMapping.png" alt="WKSEntityMapping" width="640" border="10" /><br/><br/>
-- Once all the keywords are mapped to entity types, select `Completed` from the status dropdow.n<br/>
+- Once all the keywords are mapped to entity types, select `Completed` from the status dropdow.<br/>
 <br/><img src="images/WKSMappingComplete.png" alt="WKSMappingComplete" width="640" border="10" /><br/><br/>
 - Click `Save` to save the changes.<br/>
 <br/><img src="images/WKSMappingSaved.png" alt="WKSMappingSaved" width="640" border="10" /><br/><br/>
-- Repeat above steps for all the document. All the documents should be annotated and completed.
+- Repeat above steps for all the documents in the set. It will take some time.<br/><br/>
+- At this point, all the documents should be annotated and completed.
 - If the status shows `IN PROGRESS`, click `Refresh` button.<br/>
 <br/><img src="images/WKSAnnotationStatusRefresh.png" alt="WKSAnnotationStatusRefresh" width="640" border="10" /><br/><br/>
 - Status should now change to `SUBMITTED`.
@@ -311,16 +312,18 @@ If you are not already there, open the WKS tool.
 - Click `OK` on the confirmation popup window
 - Task status now changes to `COMPLETED`.<br/>
 <br/><img src="images/WKSAnnotationCompleted.png" alt="WKSAnnotationCompleted" width="640" border="10" /><br/><br/>
-- Click `Annotator Component` on the top navigation bar.<br/>
-<br/><img src="images/WKSAnnotatorComponentLink.png" alt="WKSAnnotatorComponentLink" width="640" border="10" /><br/><br/>
-- We will create `Machine Learning` annotator. So click `Create this type of annotator` under `Machine Learning`
-<br/><img src="images/WKSMachineLearning.png" alt="WKSMachineLearning" width="640" border="10" /><br/><br/>
-- Under `Document Set` select the set whose annotation was completed in previous steps. Click `Next`
-<br/><img src="images/WKSCreateAnnotator.png" alt="WKSCreateAnnotator" width="640" border="10" /><br/><br/>
-- Click `Train and Evaluate`
+
+### 4.7 Model Training and Evaluation
+
+- Click `Performance` menu under `Machine Learning Model` in the left menu. A new screen is presented.<br/>
+<br/><img src="images/WKSPerformance.png" alt="WKSPerformance" width="640" border="10" /><br/><br/>
+- We will create a new model, so click `Train and Evaluate` button.
+- Under `Document Set` select the set whose annotation was completed in previous steps.<br/>
 <br/><img src="images/WKSTrainEvaluate.png" alt="WKSTrainEvaluate" width="640" border="10" /><br/><br/>
-- Train and Evaluate process takes place. It will take a few minutes for this step to complete
-<br/><img src="images/WKSAnnotatorProcessing.png" alt="WKSAnnotatorProcessing" width="640" border="10" />
+- Click `Train & Evaluate`.
+- Train and Evaluate process takes place.<br/>
+<br/><img src="images/WKSTrainingProcessing.png" alt="WKSTrainingProcessing" width="640" border="10" />
+- It will take a few minutes for this step to complete
 
 ## 5. Deploy WKS model to Watson Natural Language Understanding
 - Login to WKS, using the login URL noted down from prerequisites step, navigate to `Annotator Component` and click on `NLU`
