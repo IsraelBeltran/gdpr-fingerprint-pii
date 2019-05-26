@@ -322,18 +322,20 @@ If you are not already there, open the WKS tool.
 <br/><img src="images/WKSTrainEvaluate.png" alt="WKSTrainEvaluate" width="640" border="10" /><br/><br/>
 - Click `Train & Evaluate`.
 - Train and Evaluate process takes place.<br/>
-<br/><img src="images/WKSTrainingProcessing.png" alt="WKSTrainingProcessing" width="640" border="10" />
+<br/><img src="images/WKSTrainingProcessing.png" alt="WKSTrainingProcessing" width="640" border="10" /><br/><br/>
 - It will take a few minutes for this step to complete (about 25 minutes)<br/>
-<br/><img src="images/WKSTrainingCompleted.png" alt="WKSTrainingCompleted" width="640" border="10" />
+<br/><img src="images/WKSTrainingCompleted.png" alt="WKSTrainingCompleted" width="640" border="10" /><br/><br/>
+- Once training is completed, lets review the evaluation figures. Apart of the overall precision and recall, WKS offers more detailed information. Press `Detailed Statistics`.<br/>
+<br/><img src="images/WKSDetailedStatisticsClick.png" alt="WKSDetailedStatisticsClick" width="640" border="10" /><br/><br/>
+- In the new screen, a summary of quality statistics for each type can be observed. The triangle warning icon indicates that the F1 value is less than the fixed value, 0.5. If the value is N/A, means there are not enougth annotations. Both incidences should be fixed in a real project.<br/>
+<br/><img src="images/WKSDetailedStatistics.png" alt="WKSDetailedStatistics" width="640" border="10" /><br/><br/>
+- Inspect the confusion matrix and the statistics for the training set to understand how the model behaves.
+
 
 ## 5. Deploy WKS model to Watson Natural Language Understanding
-- Login to WKS, using the login URL noted down from prerequisites step, navigate to `Annotator Component` and click on `NLU`.<br/>
-<br/><img src="images/WKSCaptureModelId1.png" alt="WKSCaptureModelId1" width="640" border="10" /><br/><br/>
-- Click `Details`.<br/>
-<br/><img src="images/WKSAnnotatorCreated.png" alt="WKSAnnotatorCreated" width="640" border="10" /><br/><br/>
-- Click `Take Snapshot`.<br/>
-<br/><img src="images/WKSSnapshot.png" alt="WKSSnapshot" width="640" border="10" /><br/><br/>
-- Enter any meaningful description for the snapshot. Click `OK`.<br/>
+- Click `Versions` menu under `Machine Learning Model` in the left menu. A new screen is presented.<br/>
+<br/><img src="images/WKSCreateVersion.png" alt="WKSCreateVersion" width="640" border="10" /><br/><br/>
+- Clic `Create Version`. Enter any meaningful description for the snapshot. Click `OK`.<br/>
 <br/><img src="images/WKSSnapshotOK.png" alt="WKSSnapshotOK" width="640" border="10" /><br/><br/>
 - Snapshot is created.<br/>
 <br/><img src="images/WKSSnapshotCreated.png" alt="WKSSnapshotCreated" width="640" border="10" /><br/><br/>
@@ -341,12 +343,14 @@ If you are not already there, open the WKS tool.
 <br/><img src="images/WKSDeploy.png" alt="WKSDeploy" width="640" border="10" /><br/><br/>
 - Select `Natural Language Understanding`. Click `Next`.<br/>
 <br/><img src="images/WKSDeployModel.png" alt="WKSDeployModel" width="640" border="10" /><br/><br/>
-- Select your IBM Cloud Region, Space and NLU service instances. Click `Deploy`.<br/>
+- Select your IBM Cloud Region, Resource Group and NLU service instances. Click `Deploy`.<br/>
 <br/><img src="images/WKSDeployNLUIntsance.png" alt="WKSDeployNLUIntsance" width="640" border="10" /><br/><br/>
 - WKS model should get deployed on the NLU. Make a note of the Model Id. Click `OK`.<br/>
 <br/><img src="images/WKSModelId.png" alt="WKSModelId" width="640" border="10" /><br/><br/>
 - Model is deployed to NLU.<br/>
 <br/><img src="images/WKSDeployedSnapshot.png" alt="WKSDeployedSnapshot" width="640" border="10" /><br/>
+- Press `Status` link, and validate when the deployment has been completed.
+<br/><img src="images/WKSDeploymentCompleted.png" alt="WKSDeploymentCompleted" width="640" border="10" /><br/>
 
 
 ## 6. Update model_id in the GDPR application environment variables
