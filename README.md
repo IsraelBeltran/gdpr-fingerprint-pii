@@ -213,108 +213,105 @@ Select `AI` in the categories and select `Knowledge Studio`
 <br/><br/><img src="images/CreateWKS.png" alt="CreateWKS" width="640" border="10" /><br/><br/>
 Ensure the selected region is `Frankfurt` and the pricing plan is  `Lite` and press the `Create` button.
 Once the new screen is shown, select `Manage` at the left, and press the `Launch Watson Knowledge Studio` button.
+You should reach the following screen.
 <br/><br/><img src="images/WKSEmpty.png" alt="WKSEmpty" width="640" border="10" /><br/><br/>
 
 ## 4. Develop Watson Knowledge Studio model
 ### 4.1 Import Artifacts
 #### 4.1.1 Type Systems
-You can learn more about Type Systems [here](https://cloud.ibm.com/docs/services/knowledge-studio/typesystem.html#typesystem)
+You can learn more about Type Systems [here](https://cloud.ibm.com/docs/services/knowledge-studio/typesystem.html#typesystem).
 Type Systems can either be created or imported from an already created Type Systems
 json file. It is left to user to create his or her own Type systems or use a Type Systems
 json file provided in this repository. If you wish to import the Type Systems json
 file, then download the file named `TypeSystems.json` under the folder `WKS` in this
 repository to your local file system. The json file has entity types such as Name, PhoneNo, EmailId, Address.
-You can edit/add/delete entity types to suit your requirement.
+You can edit/add/delete entity types to suit your requirement.<br/>
+*For the guided activity, download the provided Type System json file to import it later*
 
 #### 4.1.2 Documents
-You can learn more about Documents [here](https://cloud.ibm.com/docs/services/knowledge-studio/documents-for-annotation.html#wks_t_docs_intro)
+You can learn more about Documents [here](https://cloud.ibm.com/docs/services/knowledge-studio/documents-for-annotation.html#wks_t_docs_intro).
 We will need a set of documents to train and evaluate the WKS model. These documents
 will contain the unstructured text from which we will identify personal data. Refer
-to some of the sample document files under the folder `SampleChatTranscripts`. To train
-WKS model, a large and varied set of documents are needed. To complete this exercise,
-let us consider a smaller set of documents.
+to some of the sample document files under the folder `SampleChatTranscripts`. To train a good
+WKS model with high precission and recall, a large and varied set of sample real documents are needed. <br/>
+To complete this exercise, let us consider a smaller set of documents.
 
 You can either have your own set of documents or use the ones provided in this git repository.
 It is placed under `WKS/Documents.zip`. If you decide to use the documents provided in
-this repo, then download the file to your local file system.
+this repo, then download the file to your local file system.<br/>
+*For the guided activity, download the provided Documents.zip file to import it later*
 
-### 4.2 Create Project
-Login to the WKS.
-- Click `Create Project`.
-<br/><img src="images/WKSCreateProject.png" alt="Create Project" width="640" border="10" /><br/><br/>
-- In the `Create New Project` pop up window, enter the name of the new project. Click `Create`
-<br/><img src="images/WKSCreateProjectOptions.png" alt="Create Project Options" width="640" border="10" /><br/><br/>
+### 4.2 Create Workspace
+If you are not already there, open the WKS tool.
+- Click `Create Workspace`.<br/>
+<br/><img src="images/WKSCreateProject.png" alt="Create Workspace" width="640" border="10" /><br/><br/>
+- In the `Create Workspace` pop up window, enter the name of the new Workspace. Leave `English`and the other options as they are. Click `Create`<br/>
+<br/><img src="images/WKSCreateProjectOptions.png" alt="Create Workspace Options" width="640" border="10" /><br/><br/>
 
 
 ### 4.3 Import type system
-- After the project is created, click `Type Systems` on the top navigation bar<br/>
-- Select `Entity Types` tab and click `Import`
+- After the project is created, click `Entity Types` on the left navigation menu, under `Assets` and click `Upload`<br/>
 <br/><img src="images/WKSImportTypeSystems.png" alt="Import Type Systems" width="640" border="10" /><br/><br/>
-- Click the import icon and browse to the file `TypeSystems.json` file that was downloaded from git repository<br/>
+- Click the upload icon and browse to the file `TypeSystems.json` file that was downloaded from git repository<br/>
 <br/><img src="images/WKSImportTypeSystemsBrowse.png" alt="Import Type Systems Browse" width="640" border="10" /><br/><br/>
-- The selected file gets listed in the popup window. Click `Import`
+- The selected file gets listed in the popup window. Click `Upload`<br/>
 <br/><img src="images/WKSTypeSystemsImport.png" alt="WKSTypeSystemsImport" width="640" border="10" /><br/><br/>
-- The documents are listed as below. Make a note of entity types or keywords that we are interested in. You can add or edit entities.
+- The 8 imported types are listed as below. If you wish, you can add or edit entities.<br/>
 <br/><img src="images/WKSImportedEntityTypes.png" alt="WKSImportedEntityTypes" width="640" border="10" /><br/><br/>
 
 
 ### 4.4 Import Documents
-- Click `Documents` on the top navigation bar
-<br/><img src="images/WKSImportDocuments.png" alt="WKSImportDocuments" width="640" border="10" /><br/><br/>
-- Click `Import Document Set`
+- Click `Documents` on the left navigation menu, under `Assets` and click `Upload Document Sets`<br/>
 <br/><img src="images/WKSImportDocSet.png" alt="WKSImportDocSet" width="640" border="10" /><br/><br/>
-- Click `Import` button on the popup window
-- Browse to and select `Documents.zip` file that was downloaded from github repository earlier
-- Click `Import`
+- Click the import icon on the popup window and browse to and select `Documents.zip` file that was downloaded from github repository earlier. It is also possible to drag & drop the file in the gray area.<br><br>
+- Click `Upload`
 <br/><img src="images/WKSDocImport.png" alt="WKSDocImport" width="640" border="10" /><br/><br/>
-- Documents are now imported.
+- 16 documents are imported under the `GDPR_Set` document set.
 
 
 ### 4.5 Create and assign annotation sets
-- Click `Annotation Sets` to create annotation sets
-<br/><img src="images/WKSAnnotationSet.png" alt="WKSAnnotationSet" width="640" border="10" /><br/><br/>
-- Click `Create Annotation Sets`
+- Click `Create Annotation Sets`<br/>
 <br/><img src="images/WKSCreateAnnotationSet.png" alt="WKSCreateAnnotationSet" width="640" border="10" /><br/><br/>
-- Type in name for the annotation set and click `Generate`
+- Select yourself as the annotator and type in name for the annotation set and click `Generate`<br/>
 <br/><img src="images/WKSAnnotationGenerate.png" alt="WKSAnnotationGenerate" width="640" border="10" /><br/><br/>
-- Annotation set is created.
+- Annotation set is created and the `Annotation Sets` tab is presented.
 <br/><img src="images/WKSAnnotationCreated.png" alt="WKSAnnotationCreated" width="640" border="10" /><br/><br/>
 
 
 ### 4.6 Human Annotation
-- Click `Human Annotation` on the top navigation bar
-- Click `Add Task`
+- Click the link to the `Human Annotation task` or navigate to the `Annotation Tasks` menu under `Machine Learning Model` in the left menu. A new screen is presented.
+- Click `Add Task`<br/>
 <br/><img src="images/WKSAddTask.png" alt="WKSAddTask" width="640" border="10" /><br/><br/>
-- Enter a name for the task and click `Create`
+- Enter a name for the task and click `Create`<br/>
 <br/><img src="images/WKSCreateTask.png" alt="WKSCreateTask" width="640" border="10" /><br/><br/>
 - In the popup window, select the Annotation Set that was created earlier
-- Click `Create Task`
+- Click `Create Task`<br/>
 <br/><img src="images/WKSCreateTask2.png" alt="WKSCreateTask2" width="640" border="10" /><br/><br/>
-- Task should get created. Click on the Task
+- Task should get created. Click on the Task<br/>
 <br/><img src="images/WKSTaskCreated.png" alt="WKSTaskCreated" width="640" border="10" /><br/><br/>
 - Next we need to annotate, mapping document entries with entity types defined in Type system
-- Click `Annotate`
+- Click `Annotate`<br/>
 <br/><img src="images/WKSAnnotate.png" alt="WKSAnnotate" width="640" border="10" /><br/><br/>
 - Click `OK` for any Alert message that pops up
-- Ground truth editor opens up. Here you can select each document one by one to annotate all the documents. Click on any of the documents
+- Ground truth editor opens up. Here you can select each document one by one to annotate all the documents. Click on any of the documents and click `OK` for any Alert message that may pop up.<br/>
 <br/><img src="images/WKSGroundTruthFiles.png" alt="WKSGroundTruthFiles" width="640" border="10" /><br/><br/>
 - From the documents select an entry that you want to be extracted from the document as entities. Then click on the entity type on the right hand side of the screen
-- Similarly do this for all the keywords in the document
+- Similarly do this for all the keywords in the document.<br/>
 <br/><img src="images/WKSEntityMapping.png" alt="WKSEntityMapping" width="640" border="10" /><br/><br/>
-- Once all the keywords are mapped to entity types, select `Completed` from the status dropdown
+- Once all the keywords are mapped to entity types, select `Completed` from the status dropdow.n<br/>
 <br/><img src="images/WKSMappingComplete.png" alt="WKSMappingComplete" width="640" border="10" /><br/><br/>
-- Click `Save` to save the changes
+- Click `Save` to save the changes.<br/>
 <br/><img src="images/WKSMappingSaved.png" alt="WKSMappingSaved" width="640" border="10" /><br/><br/>
-- Repeat above steps for all the document. All the documents should be annotated and completed
-- If the status shows `IN PROGRESS`, click `Refresh` button
+- Repeat above steps for all the document. All the documents should be annotated and completed.
+- If the status shows `IN PROGRESS`, click `Refresh` button.<br/>
 <br/><img src="images/WKSAnnotationStatusRefresh.png" alt="WKSAnnotationStatusRefresh" width="640" border="10" /><br/><br/>
-- Status should now change to `SUBMITTED`
-- Select the Annotation Set name and click `Accept` button
+- Status should now change to `SUBMITTED`.
+- Select the Annotation Set name and click `Accept` button.<br/>
 <br/><img src="images/WKSAnnotationAccept.png" alt="WKSAnnotationAccept" width="640" border="10" /><br/><br/>
 - Click `OK` on the confirmation popup window
-- Task status now changes to `COMPLETED`
+- Task status now changes to `COMPLETED`.<br/>
 <br/><img src="images/WKSAnnotationCompleted.png" alt="WKSAnnotationCompleted" width="640" border="10" /><br/><br/>
-- Click `Annotator Component` on the top navigation bar
+- Click `Annotator Component` on the top navigation bar.<br/>
 <br/><img src="images/WKSAnnotatorComponentLink.png" alt="WKSAnnotatorComponentLink" width="640" border="10" /><br/><br/>
 - We will create `Machine Learning` annotator. So click `Create this type of annotator` under `Machine Learning`
 <br/><img src="images/WKSMachineLearning.png" alt="WKSMachineLearning" width="640" border="10" /><br/><br/>
