@@ -111,9 +111,6 @@ designed for the cloud.
       instructions install.
     - Maven should be installed. If not installed, you can download Maven from [here](https://maven.apache.org/download.cgi). You
       can refer to installation instructions [here](https://maven.apache.org/install.html).
-- Watson Knowledge Studio account: User must have a WKS account. If you do not have
-  an account, you can create a free account [here](https://www.ibm.com/account/us-en/signup/register.html?a=IBMWatsonKnowledgeStudio).
-  Make a note of the login URL since it is unique to every login id
 - Basic knowledge of building models in WKS: The user must possess basic knowledge
   of building model in WKS in order to build a custom model. Check getting started documentation [here](https://cloud.ibm.com/docs/services/knowledge-studio/tutorials-create-project.html#wks_tutintro)
 
