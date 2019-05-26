@@ -3,8 +3,6 @@
 
 >> *From the time this repository was published, there are some changes in Watson APIs. While we update this documentation, please refer to ProcessChanges branch of this repository with updated code and documentation*
 
-*Read this in other languages: [한국어](README-ko.md).*
-
 General Data Protection Regulation (GDPR) will be a new regulation in EU which will come into effect in May 2018. This new regulation applies to those organizations, including those outside EU, which collect and process personal data. It aims to give more control to individuals over usage of their personal data.
 
 Right to forget - Under the new GDPR, organizations around the world must not only protect personal data but also forget personal data on request from individuals.
