@@ -5,15 +5,15 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import com.ibm.cloud.sdk.core.service.security.IamOptions;
 import com.ibm.json.java.JSONArray;
 import com.ibm.json.java.JSONObject;
-import com.ibm.watson.natural_language_understanding.v1.NaturalLanguageUnderstanding;
-import com.ibm.watson.natural_language_understanding.v1.model.AnalysisResults;
-import com.ibm.watson.natural_language_understanding.v1.model.AnalyzeOptions;
-import com.ibm.watson.natural_language_understanding.v1.model.EntitiesOptions;
-import com.ibm.watson.natural_language_understanding.v1.model.Features;
-import com.ibm.watson.natural_language_understanding.v1.model.KeywordsOptions;
+import com.ibm.watson.developer_cloud.natural_language_understanding.v1.NaturalLanguageUnderstanding;
+import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.AnalysisResults;
+import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.AnalyzeOptions;
+import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.EntitiesOptions;
+import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.Features;
+import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.KeywordsOptions;
+import com.ibm.watson.developer_cloud.service.security.IamOptions;
 
 
 /**
