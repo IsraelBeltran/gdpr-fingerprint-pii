@@ -329,7 +329,7 @@ If you are not already there, open the WKS tool.
 <br/><img src="images/WKSDetailedStatisticsClick.png" alt="WKSDetailedStatisticsClick" width="640" border="10" /><br/><br/>
 - In the new screen, a summary of quality statistics for each type can be observed. The triangle warning icon indicates that the F1 value is less than the fixed value, 0.5. If the value is N/A, means there are not enougth annotations. Both incidences should be fixed in a real project.<br/>
 <br/><img src="images/WKSDetailedStatistics.png" alt="WKSDetailedStatistics" width="640" border="10" /><br/><br/>
-- Inspect the confusion matrix and the statistics for the training set to understand how the model behaves.
+- Inspect the confusion matrix and the statistics for the training set to understand how the model behaves.<br/><br/>
 
 
 ## 5. Deploy WKS model to Watson Natural Language Understanding
@@ -348,13 +348,13 @@ If you are not already there, open the WKS tool.
 - WKS model should get deployed on the NLU. Make a note of the Model Id. Click `OK`.<br/>
 <br/><img src="images/WKSModelId.png" alt="WKSModelId" width="640" border="10" /><br/><br/>
 - Model is deployed to NLU.<br/>
-<br/><img src="images/WKSDeployedSnapshot.png" alt="WKSDeployedSnapshot" width="640" border="10" /><br/>
+<br/><img src="images/WKSDeployedSnapshot.png" alt="WKSDeployedSnapshot" width="640" border="10" /><br/><br/>
 - Press `Status` link, and validate when the deployment has been completed.
-<br/><img src="images/WKSDeploymentCompleted.png" alt="WKSDeploymentCompleted" width="640" border="10" /><br/>
+<br/><img src="images/WKSDeploymentCompleted.png" alt="WKSDeploymentCompleted" width="640" border="10" /><br/><br/>
 
 
 ## 6. Update model_id in the GDPR application environment variables
-- Navigate to IBM Cloud dashboard. Click on the GDPR application that is deployed.<br/>
+- Navigate to [IBM Cloud Resource List screen](https://cloud.ibm.com/resources) . Click on the GDPR application that is deployed.<br/>
 <br/><img src="images/BMDashboard.png" alt="BMDashboard" width="640" border="10" /><br/><br/>
 - Click `Runtime`.<br/>
 <br/><img src="images/Runtime.png" alt="Runtime" width="640" border="10" /><br/><br/>
@@ -375,7 +375,7 @@ If you are not already there, open the WKS tool.
 - Initially you see a collapsed tree view as below.<br/>
 <br/><img src="images/TreeView1.png" alt="TreeView1" width="640" border="10" /><br/><br/>
 - Click on nodes to expand and collapse the nodes. Full tree view looks as below.<br/>
-<br/><img src="images/TreeView2.png" alt="TreeView2" width="640" border="10" /><br/>
+<br/><img src="images/TreeView2.png" alt="TreeView2" width="640" border="10" /><br/><br/>
 
 
 ## 8. Consuming the output by other applications
@@ -386,7 +386,7 @@ The two have differently formatted output for different usage purposes. While th
 Viewer Output JSON looks as in the below image<br/>
 <br/><img src="images/ForViewer.png" alt="ForViewer" width="300" border="10" /><br/><br/>
 Generic Output JSON looks as in the below image<br/>
-<br/><img src="images/ForConsumer.png" alt="ForConsumer" width="300" border="10" /><br/>
+<br/><img src="images/ForConsumer.png" alt="ForConsumer" width="300" border="10" /><br/><br/>
 
 
 # Learn more
