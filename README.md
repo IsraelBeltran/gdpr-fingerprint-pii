@@ -99,7 +99,7 @@ designed for the cloud.
 3. [Application deployment](#3-application-deployment)
 4. [Develop Watson Knowledge Studio model](#4-develop-watson-knowledge-studio-model)
 5. [Deploy WKS model to Watson Natural Language Understanding](#5-deploy-wks-model-to-watson-natural-language-understanding)
-6. [Verify that configuration parameters are correct](#6-verify-that-configuration-parameters-are-correct)
+6. [Update model_id in the GDPR application environment variables](#6-Update-model_id-in-the-GDPR-application-environment-variables)
 7. [Analyze results](#7-analyze-results)
 8. [Consuming the output by other applications](#8-consuming-the-output-by-other-applications)
 
@@ -323,53 +323,53 @@ If you are not already there, open the WKS tool.
 - Click `Train & Evaluate`.
 - Train and Evaluate process takes place.<br/>
 <br/><img src="images/WKSTrainingProcessing.png" alt="WKSTrainingProcessing" width="640" border="10" />
-- It will take a few minutes for this step to complete
+- It will take a few minutes for this step to complete (about 20 minutes)
 
 ## 5. Deploy WKS model to Watson Natural Language Understanding
-- Login to WKS, using the login URL noted down from prerequisites step, navigate to `Annotator Component` and click on `NLU`
+- Login to WKS, using the login URL noted down from prerequisites step, navigate to `Annotator Component` and click on `NLU`.<br/>
 <br/><img src="images/WKSCaptureModelId1.png" alt="WKSCaptureModelId1" width="640" border="10" /><br/><br/>
-- Click `Details`
+- Click `Details`.<br/>
 <br/><img src="images/WKSAnnotatorCreated.png" alt="WKSAnnotatorCreated" width="640" border="10" /><br/><br/>
-- Click `Take Snapshot`
+- Click `Take Snapshot`.<br/>
 <br/><img src="images/WKSSnapshot.png" alt="WKSSnapshot" width="640" border="10" /><br/><br/>
-- Enter any meaningful description for the snapshot. Click `OK`
+- Enter any meaningful description for the snapshot. Click `OK`.<br/>
 <br/><img src="images/WKSSnapshotOK.png" alt="WKSSnapshotOK" width="640" border="10" /><br/><br/>
-- Snapshot is created
+- Snapshot is created.<br/>
 <br/><img src="images/WKSSnapshotCreated.png" alt="WKSSnapshotCreated" width="640" border="10" /><br/><br/>
-- Click `Deploy` to deploy on the NLU service that was created in earlier steps in this document. Click `Deploy`
+- Click `Deploy` to deploy on the NLU service that was created in earlier steps in this document. Click `Deploy`.<br/>
 <br/><img src="images/WKSDeploy.png" alt="WKSDeploy" width="640" border="10" /><br/><br/>
-- Select `Natural Language Understanding`. Click `Next`
+- Select `Natural Language Understanding`. Click `Next`.<br/>
 <br/><img src="images/WKSDeployModel.png" alt="WKSDeployModel" width="640" border="10" /><br/><br/>
-- Select your IBM Cloud Region, Space and NLU service instances. Click `Deploy`
+- Select your IBM Cloud Region, Space and NLU service instances. Click `Deploy`.<br/>
 <br/><img src="images/WKSDeployNLUIntsance.png" alt="WKSDeployNLUIntsance" width="640" border="10" /><br/><br/>
-- WKS model should get deployed on the NLU. Make a note of the Model Id. Click `OK`
+- WKS model should get deployed on the NLU. Make a note of the Model Id. Click `OK`.<br/>
 <br/><img src="images/WKSModelId.png" alt="WKSModelId" width="640" border="10" /><br/><br/>
-- Model is deployed to NLU
+- Model is deployed to NLU.<br/>
 <br/><img src="images/WKSDeployedSnapshot.png" alt="WKSDeployedSnapshot" width="640" border="10" /><br/>
 
 
-## 6. Verify that configuration parameters are correct
-- Navigate to IBM Cloud dashboard. Click on the GDPR application that is deployed
+## 6. Update model_id in the GDPR application environment variables
+- Navigate to IBM Cloud dashboard. Click on the GDPR application that is deployed.<br/>
 <br/><img src="images/BMDashboard.png" alt="BMDashboard" width="640" border="10" /><br/><br/>
-- Click `Runtime`
+- Click `Runtime`.<br/>
 <br/><img src="images/Runtime.png" alt="Runtime" width="640" border="10" /><br/><br/>
-- Click `Environment Variables` and scroll down to user defined variables
+- Click `Environment Variables` and scroll down to user defined variables.<br/>
 <br/><img src="images/EnvVar.png" alt="EnvVar" width="640" border="10" /><br/><br/>
-- Update the model id against `wks_model` entry. Also here is where you will update all your configuration data. Update/edit all the configuration data as required. Finally verify that all other configuration parameters are correct. Click `Save`
+- Update the model id against `wks_model` entry. Also here is where you will update all your configuration data. Update/edit all the configuration data as required. Finally verify that all other configuration parameters are correct. Click `Save`.<br/>
 <br/><img src="images/EnvVarModelId.png" alt="EnvVarModelId" width="640" border="10" /><br/><br/>
-- The application restages. When the application is running, we are ready to use the application to extract personal data and score them from unstructured text
+- The application restages. When the application is running, we are ready to use the application to extract personal data and score them from unstructured text.<br/>
 <br/><img src="images/AppRestarting.png" alt="AppRestarting" width="640" border="10" /><br/>
 
 
 ## 7. Analyze Results
 - From the github repo for this Pattern, download sample chat transcripts, from
   the folder `SampleChatTranscripts`, on to your local file system
-- Open the application URL from a browser
+- Open the application URL from a browser.<br/>
 <br/><img src="images/AppHomePage.png" alt="AppHomePage" width="640" border="10" /><br/><br/>
 - Click `Choose File`. On the popup window browse to any chat transcript that you downloaded in 2 steps above and select it. Click `Open`
-- Initially you see a collapsed tree view as below
+- Initially you see a collapsed tree view as below.<br/>
 <br/><img src="images/TreeView1.png" alt="TreeView1" width="640" border="10" /><br/><br/>
-- Click on nodes to expand and collapse the nodes. Full tree view looks as below
+- Click on nodes to expand and collapse the nodes. Full tree view looks as below.<br/>
 <br/><img src="images/TreeView2.png" alt="TreeView2" width="640" border="10" /><br/>
 
 
@@ -382,10 +382,6 @@ Viewer Output JSON looks as in the below image<br/>
 <br/><img src="images/ForViewer.png" alt="ForViewer" width="300" border="10" /><br/><br/>
 Generic Output JSON looks as in the below image<br/>
 <br/><img src="images/ForConsumer.png" alt="ForConsumer" width="300" border="10" /><br/>
-
-
-# References
-*
 
 
 # Learn more
