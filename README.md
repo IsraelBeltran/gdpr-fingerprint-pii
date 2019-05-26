@@ -191,63 +191,21 @@ overall confidence score. <br/>
 ### 3. Application deployment
 #### 3.1 Deploy Java Liberty application to IBM Cloud
 You can deploy the Java Liberty application using the `Deploy to IBM Cloud` button or
-using manual steps.
-##### 3.1.1 Deploy using "Deploy to IBM Cloud"
-Click `Deploy to IBM Cloud` button above to deploy the application to IBM Cloud. It will take some time and may ask you to log in to IBM Cloud if you are not loggedin already. 
+using manual steps (see the original source for manual steps).
+<br/><br/><br/>
+Click `Deploy to IBM Cloud` button above to deploy the application to IBM Cloud. <br/>
+<br/>[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/jaumemir/gdpr-fingerprint-pii.git)
+
+<br/><br/>It will take some time and may ask you to log in to IBM Cloud if you are not loggedin already. 
 You would be presented with a toolchain view. Check that the selected region is `Frankfurt` and under `Delivery Pipeline` fill in the empty slots by pressing the `Create` button. <br/>
 <br/><img src="images/ToolChainSetup.png" alt="ToolChainSetup" width="640" border="10" /><br/><br/>
 An emerging window will ask again for a `Create` selection. Then go ahead and click `Deploy` button. 
 <br/><br/><img src="images/ToolChainOK.png" alt="ToolChainOK" width="640" border="10" /><br/><br/>
-The application should get deployed. Ensure that the application
-is started and that a NLU service is created and bound to the application just deployed. <br/>
-[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/jaumemir/gdpr-fingerprint-pii.git)
-##### 3.1.2 Deploy using Manual steps
-If you have used `Deploy to IBM Cloud` button to deploy the application, then skip this
-section and jump to section "4. Develop Watson Knowledge Studio model". If you have
-not used `Deploy to IBM Cloud` button to deploy the application, then complete the sections
-"3.1.2.1 Create NLU service instance" and "3.1.2.2 Deploy the Java application on IBM Cloud"
-below.
-###### 3.1.2.1 Create NLU service instance
-- Step1: Click [here](https://cloud.ibm.com/catalog/services/natural-language-understanding)
-to create NLU service
-- Step2: Below screen is displayed
-  <br/><img src="images/NLUCreateDefault.png" alt="NLUCreateDefault" width="640" border="10" /><br/><br/>
-- Step3: Edit the field "Service name:" to say NLUGDPR and leave the other settings default.
-  Click `Create`
-  <br/><img src="images/NLUCreateEdit.png" alt="NLUCreateEdit" width="640" border="10" /><br/><br/>
-- Step4: NLU service instance should get created.
-###### 3.1.2.2 Deploy the Java application on IBM Cloud
-- Step5: Clone the [repo](https://github.com/IBM/gdpr-fingerprint-pii)
-- Step6: Open command prompt. Login to your IBM Cloud space using the below command.
-  Ensure that you login to same space where NLU service instance was created in section
-  "3.1.2.1 Create NLU service instance"
-```
-cf login
-```
-- Step7: Change directory to the cloned repo's root directory
-- Step8: You will find manifest.yml file at the project's root folder. Verify if the
-NLU service name is same as the one created in Step1 above. If not, update the NLU
-service name to the one created above
-  <br/><img src="images/ManifestServiceBinding.png" alt="ManifestServiceBinding" width="640" border="10" /><br/>
-
-- Step9: Build war file using the command
-```
-mvn clean package
-```
-
-- Step9: Deploy the Java Liberty Application using the below command. Provide a unique
-  application name so that the route is not already taken in IBM Cloud.
-```
-cf push <unique-application-name> -p target/PersonalDataScorer.war
-```
-- Step10: On IBM Cloud dashboard, ensure that the application is deployed successfully and is running.
-<br/><img src="images/AppRunning.png" alt="AppRunning" width="640" border="10" /><br/><br/>
-
-- Step11: On IBM Cloud dashboard, click on the application that was deployed in Step9.
-On the left hand side navigation links click `Connections`. Verify that the NLU service
-created in Step3 is listed.
-<br/><img src="images/ServiceBinding.png" alt="ServiceBinding" width="640" border="10" /><br/>
-
+Press on the `Delivery Pipeline`. A new screen will show the application being compiled and deployed. Once both stages get a green status (`Stage passed`), select the `View Console` small link in the `Deploy Stage`.
+The application console opens. It should show a green status (`Running`) on the top. Ensure that the application
+is started and that a NLU service is created and bound to the application just deployed. (check similar status as in the following picture)
+<br/><br/><img src="images/AppConsoleOK.png" alt="AppConsoleOK" width="640" border="10" /><br/><br/>
+<br/>
 
 ### 4. Develop Watson Knowledge Studio model
 ## 4.1 Import Artifacts
