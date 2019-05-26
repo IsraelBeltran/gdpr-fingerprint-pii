@@ -104,7 +104,7 @@ designed for the cloud.
 8. [Consuming the output by other applications](#8-consuming-the-output-by-other-applications)
 
 
-### 1. Prerequisites
+## 1. Prerequisites
 - IBM Cloud account: If you do not have an IBM Cloud account, you can create an account [here](https://cloud.ibm.com/).
 - If you opt to deploy the Liberty application manually then
     - Cloud Foundry cli should be installed. If not installed, click [here](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) for
@@ -115,13 +115,13 @@ designed for the cloud.
   of building model in WKS in order to build a custom model. Check getting started documentation [here](https://cloud.ibm.com/docs/services/knowledge-studio/tutorials-create-project.html#wks_tutintro)
 
 
-### 2. Concepts used
-#### 2.1 Data extraction methods
+## 2. Concepts used
+### 2.1 Data extraction methods
 We have to define what personal data (e.g. Name, Email id) we would want to extract. This is done in two ways in this code pattern. <br/>
 A) Using Custom model built using Watson Knowledge Studio (WKS) and <br/>
 B) Using regular expressions. Details of how these are used are explained in subsequent
 sections.<br/><br/>
-#### 2.2  Configuration
+### 2.2  Configuration
 We use configuration to extract personal data. Personal data are classified into different
 categories. Each category is assigned a weight. Also we specify what personal data
 belongs to which category. <br/>
@@ -155,15 +155,15 @@ Date
 (0[1-9]|[12]\[0-9]|3[01])
 ```
 
-#### 2.3 Brief description of application components
-##### 2.3.1 Personal Data Extractor component:
+### 2.3 Brief description of application components
+#### 2.3.1 Personal Data Extractor component:
 Personal Data Extractor component is the controller which controls the flow of data
 between all the components. It also integrates with NLU.
-##### 2.3.2 Regex component:
+#### 2.3.2 Regex component:
 Regex component parses the input text using the regular expressions provided in the
 configuration files to extract personal data. Regular expressions are used to extract
 personal data to augment NLU output.
-##### 2.3.3 Scorer component:
+#### 2.3.3 Scorer component:
 Scorer component calculates the score of a document, which is between 0 and 1, based
 on the personal data identified and the configuration data. It uses the below algorithm<br/>
 
@@ -179,7 +179,7 @@ Let score be 0
 score = score / 100; // to make it between 0 and 1
 ```
 
-##### 2.3.4 Viewer component:
+#### 2.3.4 Viewer component:
 Viewer component is the user interface component of the application. User can browse
 a file, containing chat transcript, and submit to personal data extraction component.
 After processed personal data are then shown in a tree view, along with the
@@ -188,8 +188,8 @@ overall confidence score. <br/>
 <img src="images/Viewer.png" alt="Personal Data View diagram" width="640" border="10" />
 -->
 
-### 3. Application deployment
-#### 3.1 Deploy Java Liberty application to IBM Cloud
+## 3. Application & Service Deployment
+### 3.1 Deploy Java Liberty application to IBM Cloud
 You can deploy the Java Liberty application using the `Deploy to IBM Cloud` button or
 using manual steps (see the original source for manual steps).
 <br/><br/><br/>
@@ -207,9 +207,17 @@ is started and that a NLU service is created and bound to the application just d
 <br/><br/><img src="images/AppConsoleOK.png" alt="AppConsoleOK" width="640" border="10" /><br/><br/>
 <br/>
 
-### 4. Develop Watson Knowledge Studio model
-## 4.1 Import Artifacts
-### 4.1.1 Type Systems
+### 3.2 Deploy Watson Knowledge Studio (WKS) service in IBM Cloud
+Press the `Catalog` link on the top bar and navigate to the service catalog.
+Select `AI` in the categories and select `Knowledge Studio`
+<br/><br/><img src="images/CreateWKS.png" alt="CreateWKS" width="640" border="10" /><br/><br/>
+Ensure the selected region is `Frankfurt` and the pricing plan is  `Lite` and press the `Create` button.
+Once the new screen is shown, select `Manage` at the left, and press the `Launch Watson Knowledge Studio` button.
+<br/><br/><img src="images/WKSEmpty.png" alt="WKSEmpty" width="640" border="10" /><br/><br/>
+
+## 4. Develop Watson Knowledge Studio model
+### 4.1 Import Artifacts
+#### 4.1.1 Type Systems
 You can learn more about Type Systems [here](https://cloud.ibm.com/docs/services/knowledge-studio/typesystem.html#typesystem)
 Type Systems can either be created or imported from an already created Type Systems
 json file. It is left to user to create his or her own Type systems or use a Type Systems
@@ -218,7 +226,7 @@ file, then download the file named `TypeSystems.json` under the folder `WKS` in 
 repository to your local file system. The json file has entity types such as Name, PhoneNo, EmailId, Address.
 You can edit/add/delete entity types to suit your requirement.
 
-### 4.1.2 Documents
+#### 4.1.2 Documents
 You can learn more about Documents [here](https://cloud.ibm.com/docs/services/knowledge-studio/documents-for-annotation.html#wks_t_docs_intro)
 We will need a set of documents to train and evaluate the WKS model. These documents
 will contain the unstructured text from which we will identify personal data. Refer
@@ -230,7 +238,7 @@ You can either have your own set of documents or use the ones provided in this g
 It is placed under `WKS/Documents.zip`. If you decide to use the documents provided in
 this repo, then download the file to your local file system.
 
-## 4.2 Create Project
+### 4.2 Create Project
 Login to the WKS.
 - Click `Create Project`.
 <br/><img src="images/WKSCreateProject.png" alt="Create Project" width="640" border="10" /><br/><br/>
@@ -238,7 +246,7 @@ Login to the WKS.
 <br/><img src="images/WKSCreateProjectOptions.png" alt="Create Project Options" width="640" border="10" /><br/><br/>
 
 
-## 4.3 Import type system
+### 4.3 Import type system
 - After the project is created, click `Type Systems` on the top navigation bar<br/>
 - Select `Entity Types` tab and click `Import`
 <br/><img src="images/WKSImportTypeSystems.png" alt="Import Type Systems" width="640" border="10" /><br/><br/>
@@ -250,7 +258,7 @@ Login to the WKS.
 <br/><img src="images/WKSImportedEntityTypes.png" alt="WKSImportedEntityTypes" width="640" border="10" /><br/><br/>
 
 
-## 4.4 Import Documents
+### 4.4 Import Documents
 - Click `Documents` on the top navigation bar
 <br/><img src="images/WKSImportDocuments.png" alt="WKSImportDocuments" width="640" border="10" /><br/><br/>
 - Click `Import Document Set`
@@ -262,7 +270,7 @@ Login to the WKS.
 - Documents are now imported.
 
 
-## 4.5 Create and assign annotation sets
+### 4.5 Create and assign annotation sets
 - Click `Annotation Sets` to create annotation sets
 <br/><img src="images/WKSAnnotationSet.png" alt="WKSAnnotationSet" width="640" border="10" /><br/><br/>
 - Click `Create Annotation Sets`
@@ -273,7 +281,7 @@ Login to the WKS.
 <br/><img src="images/WKSAnnotationCreated.png" alt="WKSAnnotationCreated" width="640" border="10" /><br/><br/>
 
 
-## 4.6 Human Annotation
+### 4.6 Human Annotation
 - Click `Human Annotation` on the top navigation bar
 - Click `Add Task`
 <br/><img src="images/WKSAddTask.png" alt="WKSAddTask" width="640" border="10" /><br/><br/>
@@ -317,7 +325,7 @@ Login to the WKS.
 - Train and Evaluate process takes place. It will take a few minutes for this step to complete
 <br/><img src="images/WKSAnnotatorProcessing.png" alt="WKSAnnotatorProcessing" width="640" border="10" />
 
-### 5. Deploy WKS model to Watson Natural Language Understanding
+## 5. Deploy WKS model to Watson Natural Language Understanding
 - Login to WKS, using the login URL noted down from prerequisites step, navigate to `Annotator Component` and click on `NLU`
 <br/><img src="images/WKSCaptureModelId1.png" alt="WKSCaptureModelId1" width="640" border="10" /><br/><br/>
 - Click `Details`
@@ -340,7 +348,7 @@ Login to the WKS.
 <br/><img src="images/WKSDeployedSnapshot.png" alt="WKSDeployedSnapshot" width="640" border="10" /><br/>
 
 
-### 6. Verify that configuration parameters are correct
+## 6. Verify that configuration parameters are correct
 - Navigate to IBM Cloud dashboard. Click on the GDPR application that is deployed
 <br/><img src="images/BMDashboard.png" alt="BMDashboard" width="640" border="10" /><br/><br/>
 - Click `Runtime`
@@ -353,7 +361,7 @@ Login to the WKS.
 <br/><img src="images/AppRestarting.png" alt="AppRestarting" width="640" border="10" /><br/>
 
 
-### 7. Analyze Results
+## 7. Analyze Results
 - From the github repo for this Pattern, download sample chat transcripts, from
   the folder `SampleChatTranscripts`, on to your local file system
 - Open the application URL from a browser
@@ -365,7 +373,7 @@ Login to the WKS.
 <br/><img src="images/TreeView2.png" alt="TreeView2" width="640" border="10" /><br/>
 
 
-### 8. Consuming the output by other applications
+## 8. Consuming the output by other applications
 - This application exposes two REST interfaces <br />
 /rest/personaldata/forviewer and <br/>
 /rest/personaldata/forconsumer<br/>
