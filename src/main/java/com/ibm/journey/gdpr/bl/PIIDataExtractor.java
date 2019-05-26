@@ -179,17 +179,14 @@ public class PIIDataExtractor {
 //			NaturalLanguageUnderstanding service = new NaturalLanguageUnderstanding(
 //					NaturalLanguageUnderstanding.VERSION_DATE_2017_02_27, nluCreds.get("username"), nluCreds.get("password"));
 
-			EntitiesOptions entitiesOptions = new EntitiesOptions.Builder().model(model).emotion(true).sentiment(true)
+			EntitiesOptions entitiesOptions = new EntitiesOptions.Builder().model(model).emotion(false).sentiment(false)
 					.limit(20).build();
 			KeywordsOptions keywordsOptions = new KeywordsOptions.Builder().emotion(true).sentiment(true).limit(20)
 					.build();
 			Features features = new Features.Builder().entities(entitiesOptions).keywords(keywordsOptions).build();
 			AnalyzeOptions parameters = new AnalyzeOptions.Builder().text(text).features(features).build();
 			
-			AnalysisResults response = nluservice
-					  .analyze(parameters)
-					  .execute()
-					  .getResult();
+			AnalysisResults response = nluservice.analyze(parameters).execute();
 			
 
 			return JSONObject.parse(response.toString());
