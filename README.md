@@ -323,7 +323,8 @@ If you are not already there, open the WKS tool.
 - Click `Train & Evaluate`.
 - Train and Evaluate process takes place.<br/>
 <br/><img src="images/WKSTrainingProcessing.png" alt="WKSTrainingProcessing" width="640" border="10" />
-- It will take a few minutes for this step to complete (about 20 minutes)
+- It will take a few minutes for this step to complete (about 25 minutes)<br/>
+<br/><img src="images/WKSTrainingCompleted.png" alt="WKSTrainingCompleted" width="640" border="10" />
 
 ## 5. Deploy WKS model to Watson Natural Language Understanding
 - Login to WKS, using the login URL noted down from prerequisites step, navigate to `Annotator Component` and click on `NLU`.<br/>
