@@ -193,9 +193,12 @@ overall confidence score. <br/>
 You can deploy the Java Liberty application using the `Deploy to IBM Cloud` button or
 using manual steps.
 ##### 3.1.1 Deploy using "Deploy to IBM Cloud"
-Click `Deploy to IBM Cloud` button above to deploy the application to IBM Cloud. You would
-be presented with a toolchain view and asked to "Deploy" the application. Go ahead and
-click `Deploy` button. The application should get deployed. Ensure that the application
+Click `Deploy to IBM Cloud` button above to deploy the application to IBM Cloud. It will take some time and may ask you to log in to IBM Cloud if you are not loggedin already. 
+You would be presented with a toolchain view. Check that the selected region is `Frankfurt` and under `Delivery Pipeline` fill in the empty slots by pressing the `Create` button. <br/>
+<br/><img src="images/ToolChainSetup.png" alt="ToolChainSetup" width="640" border="10" /><br/><br/>
+An emerging window will ask again for a `Create` selection. Then go ahead and click `Deploy` button. 
+<br/><br/><img src="images/ToolChainOK.png" alt="ToolChainOK" width="640" border="10" /><br/><br/>
+The application should get deployed. Ensure that the application
 is started and that a NLU service is created and bound to the application just deployed. <br/>
 [![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/jaumemir/gdpr-fingerprint-pii.git)
 ##### 3.1.2 Deploy using Manual steps
