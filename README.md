@@ -212,7 +212,7 @@ You should reach the following screen.
 <br/><br/><img src="images/WKSEmpty.png" alt="WKSEmpty" width="640" border="10" /><br/><br/>
 
 ## 4. Develop Watson Knowledge Studio model
-### 4.1 Import Artifacts
+### 4.1 Concepts
 #### 4.1.1 Type Systems
 You can learn more about Type Systems [here](https://cloud.ibm.com/docs/services/knowledge-studio/typesystem.html#typesystem).
 Type Systems can either be created or imported from an already created Type Systems
@@ -247,7 +247,7 @@ If you are not already there, open the WKS tool.
 ### 4.3 Import type system
 - After the project is created, click `Entity Types` on the left navigation menu, under `Assets` and click `Upload`<br/>
 <br/><img src="images/WKSImportTypeSystems.png" alt="Import Type Systems" width="640" border="10" /><br/><br/>
-- Click the upload icon and browse to the file `TypeSystems.json` file that was downloaded from git repository<br/>
+- Click the upload icon and browse to the file `WKS/TypeSystems.json` file that was downloaded from git repository<br/>
 <br/><img src="images/WKSImportTypeSystemsBrowse.png" alt="Import Type Systems Browse" width="640" border="10" /><br/><br/>
 - The selected file gets listed in the popup window. Click `Upload`<br/>
 <br/><img src="images/WKSTypeSystemsImport.png" alt="WKSTypeSystemsImport" width="640" border="10" /><br/><br/>
