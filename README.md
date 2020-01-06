@@ -211,7 +211,7 @@ is started and that a NLU service is created and bound to the application just d
 Press the `Catalog` link on the top bar and navigate to the service catalog.
 Select `AI` in the categories and select `Knowledge Studio`
 <br/><br/><img src="images/CreateWKS.png" alt="CreateWKS" width="640" border="10" /><br/><br/>
-Ensure the selected region is `London` and the pricing plan is  `Lite` and press the `Create` button.
+Selected region such as `London`, `Frankfurt` or `Dallas`and ensure the pricing plan is `Lite` and press the `Create` button.
 Once the new screen is shown, select `Manage` at the left, and press the `Launch Watson Knowledge Studio` button.
 You should reach the following screen.
 <br/><br/><img src="images/WKSEmpty.png" alt="WKSEmpty" width="640" border="10" /><br/><br/>
