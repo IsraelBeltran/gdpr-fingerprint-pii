@@ -264,32 +264,13 @@ If you are not already there, open the WKS tool.
 - 16 documents are imported under the `GDPR_Set` document set.
 
 
-### 4.5 Create and assign annotation sets
-- Click `Create Annotation Sets`<br/>
-<br/><img src="images/WKSCreateAnnotationSet.png" alt="WKSCreateAnnotationSet" width="640" border="10" /><br/><br/>
-- Select yourself as the annotator and type in name for the annotation set and click `Generate`<br/>
-<br/><img src="images/WKSAnnotationGenerate.png" alt="WKSAnnotationGenerate" width="640" border="10" /><br/><br/>
-- Annotation set is created and the `Annotation Sets` tab is presented.<br/>
-<br/><img src="images/WKSAnnotationCreated.png" alt="WKSAnnotationCreated" width="640" border="10" /><br/><br/>
-
-
-### 4.6 Human Annotation
-- Click the link to the `create a task on the Annotation Tasks page.` or navigate to the `Annotation Tasks` menu under `Machine Learning Model` in the left menu. A new screen is presented.
-- Click `Add Task`<br/>
-<br/><img src="images/WKSAddTask.png" alt="WKSAddTask" width="640" border="10" /><br/><br/>
-- Enter a name for the task and click `Create`<br/>
-<br/><img src="images/WKSCreateTask.png" alt="WKSCreateTask" width="640" border="10" /><br/><br/>
-- In the popup window, select the Annotation Set that was created earlier
-- Click `Create Task`<br/>
-<br/><img src="images/WKSCreateTask2.png" alt="WKSCreateTask2" width="640" border="10" /><br/><br/>
-- Task should get created. Click on the Task<br/>
-<br/><img src="images/WKSTaskCreated.png" alt="WKSTaskCreated" width="640" border="10" /><br/><br/>
-- Next we need to annotate, mapping document entries with entity types defined in Type system
+### 4.5 Human Annotation
+- Click the link in the `go to Annotations page.` text or navigate to the `Annotation Tasks` menu under `Machine Learning Model` in the left menu. A new screen is presented.
+<br/><img src="images/NewAnnotationMainScreen.png" alt="NewAnnotationMainScreen" width="640" border="10" /><br/><br/>
 - Click `Annotate`<br/>
-<br/><img src="images/WKSAnnotate.png" alt="WKSAnnotate" width="640" border="10" /><br/><br/>
 - Click `OK` for any Alert message that pops up
 - Ground truth editor opens up. Here you can select each document one by one to annotate all the documents. Click on any of the documents and click `OK` for any Alert message that may pop up.<br/>
-<br/><img src="images/WKSGroundTruthFiles.png" alt="WKSGroundTruthFiles" width="640" border="10" /><br/><br/>
+<br/><img src="images/NewWKSGroundTruthFiles.png" alt="NewWKSGroundTruthFiles" width="640" border="10" /><br/><br/>
 - From the documents select an entry that you want to be extracted from the document as entities. Then click on the entity type on the right hand side of the screen
 - Similarly do this for all the entities in the document. Note that the idea is to only annotate "customer names" and "customer companies" and not "agent names" or "telco company".<br/>
 <br/><img src="images/WKSEntityMapping.png" alt="WKSEntityMapping" width="640" border="10" /><br/><br/>
@@ -308,7 +289,7 @@ If you are not already there, open the WKS tool.
 - Task status now changes to `COMPLETED`.<br/>
 <br/><img src="images/WKSAnnotationCompleted.png" alt="WKSAnnotationCompleted" width="640" border="10" /><br/><br/>
 
-### 4.7 Model Training and Evaluation
+### 4.6 Model Training and Evaluation
 
 - Click `Performance` menu under `Machine Learning Model` in the left menu. A new screen is presented.<br/>
 <br/><img src="images/WKSPerformance.png" alt="WKSPerformance" width="640" border="10" /><br/><br/>
