@@ -277,15 +277,16 @@ If you are not already there, open the WKS tool.
 - Once all the keywords are mapped to entity types, click `Save` to save the changes. Then click on `Open document list`, select another document and repeat above steps for all the documents in the set. It will take some time.<br/><br/>
 - At this point, all the documents should be annotated and completed.
 - Check in the document list that all the documents have the icon for "annotated".
-<br/><img src="images/NewWKSAnnotationCompleted.png" alt="WKSAnnotationCompleted" width="640" border="10" /><br/><br/>
+<br/><br/>
+<img src="images/NewWKSAnnotationCompleted.png" alt="WKSAnnotationCompleted" width="640" border="10" /><br/><br/>
 
 ### 4.6 Model Training and Evaluation
 
 - Click `Performance` menu under `Machine Learning Model` in the left menu. A new screen is presented.<br/>
 <br/><img src="images/WKSPerformance.png" alt="WKSPerformance" width="640" border="10" /><br/><br/>
 - We will create a new model, so click `Train and Evaluate` button.
-- Under `Document Set` select the set whose annotation was completed in previous steps.<br/>
-<br/><img src="images/WKSTrainEvaluate.png" alt="WKSTrainEvaluate" width="640" border="10" /><br/><br/>
+- Under `Document Set` select the `GDPR_set` whose annotation was completed in previous steps.<br/>
+<br/><img src="images/NewWKSTrainEvaluate.png" alt="WKSTrainEvaluate" width="640" border="10" /><br/><br/>
 - Click `Train & Evaluate`.
 - Train and Evaluate process takes place.<br/>
 <br/><img src="images/WKSTrainingProcessing.png" alt="WKSTrainingProcessing" width="640" border="10" /><br/><br/>
