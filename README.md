@@ -327,7 +327,7 @@ If you are not already there, open the WKS tool.
 <br/><img src="images/Runtime.png" alt="Runtime" width="640" border="10" /><br/><br/>
 - Click `Environment Variables` and scroll down to user defined variables.<br/>
 <br/><img src="images/EnvVar.png" alt="EnvVar" width="640" border="10" /><br/><br/>
-- Update the model id against `wks_model` entry. Also here is where you will update all your configuration data. Update/edit all the configuration data as required. Finally verify that all other configuration parameters are correct. Click `Save`.<br/>
+- Update the model id against `wks_model` entry. Ensure there are no whitespaces before or after the `model_id` Also here is where you will update all your configuration data. Update/edit all the configuration data as required. Finally verify that all other configuration parameters are correct. Click `Save`.<br/>
 <br/><img src="images/EnvVarModelId.png" alt="EnvVarModelId" width="640" border="10" /><br/><br/>
 - The application restarts. When the application is running again, we are ready to use the application to extract personal data and score them from unstructured text.<br/>
 <br/><img src="images/AppRestarting.png" alt="AppRestarting" width="640" border="10" /><br/>
