@@ -273,21 +273,11 @@ If you are not already there, open the WKS tool.
 <br/><img src="images/NewWKSGroundTruthFiles.png" alt="NewWKSGroundTruthFiles" width="640" border="10" /><br/><br/>
 - From the documents select an entry that you want to be extracted from the document as entities. Then click on the entity type on the right hand side of the screen
 - Similarly do this for all the entities in the document. Note that the idea is to only annotate **"customer names"** and **"customer companies"** and **not** *"agent names"* or *"telco company"*. That is, the type **"Names"** in reality means **"Customer Names"**<br/>
-<br/><img src="images/WKSEntityMapping.png" alt="WKSEntityMapping" width="640" border="10" /><br/><br/>
-- Once all the keywords are mapped to entity types, select `Completed` from the status dropdow.<br/>
-<br/><img src="images/WKSMappingComplete.png" alt="WKSMappingComplete" width="640" border="10" /><br/><br/>
-- Click `Save` to save the changes.<br/>
-<br/><img src="images/WKSMappingSaved.png" alt="WKSMappingSaved" width="640" border="10" /><br/><br/>
-- Repeat above steps for all the documents in the set. It will take some time.<br/><br/>
+<br/><img src="images/NewWKSEntityMapping.png" alt="WKSEntityMapping" width="640" border="10" /><br/><br/>
+- Once all the keywords are mapped to entity types, click `Save` to save the changes. Then click on `Open document list`, select another document and repeat above steps for all the documents in the set. It will take some time.<br/><br/>
 - At this point, all the documents should be annotated and completed.
-- If the status shows `IN PROGRESS`, click `Refresh` button.<br/>
-<br/><img src="images/WKSAnnotationStatusRefresh.png" alt="WKSAnnotationStatusRefresh" width="640" border="10" /><br/><br/>
-- Status should now change to `SUBMITTED`.
-- Select the Annotation Set name and click `Accept` button.<br/>
-<br/><img src="images/WKSAnnotationAccept.png" alt="WKSAnnotationAccept" width="640" border="10" /><br/><br/>
-- Click `OK` on the confirmation popup window
-- Task status now changes to `COMPLETED`.<br/>
-<br/><img src="images/WKSAnnotationCompleted.png" alt="WKSAnnotationCompleted" width="640" border="10" /><br/><br/>
+- Check in the document list that all the documents have the icon for "annotated".
+<br/><img src="images/NewWKSAnnotationCompleted.png" alt="WKSAnnotationCompleted" width="640" border="10" /><br/><br/>
 
 ### 4.6 Model Training and Evaluation
 
