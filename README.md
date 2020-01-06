@@ -106,11 +106,6 @@ designed for the cloud.
 
 ## 1. Prerequisites
 - IBM Cloud account: If you do not have an IBM Cloud account, you can create an account [here](https://cloud.ibm.com/).
-- If you opt to deploy the Liberty application manually then
-    - Cloud Foundry cli should be installed. If not installed, click [here](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) for
-      instructions install.
-    - Maven should be installed. If not installed, you can download Maven from [here](https://maven.apache.org/download.cgi). You
-      can refer to installation instructions [here](https://maven.apache.org/install.html).
 - Basic knowledge of building models in WKS: The user must possess basic knowledge
   of building model in WKS in order to build a custom model. Check getting started documentation [here](https://cloud.ibm.com/docs/services/knowledge-studio/tutorials-create-project.html#wks_tutintro)
 
@@ -199,7 +194,7 @@ Click `Deploy to IBM Cloud` button above to deploy the application to IBM Cloud.
 <br/><br/>It will take some time and may ask you to log in to IBM Cloud if you are not loggedin already. 
 You would be presented with a toolchain view. Check that the selected region is either `London`, `Frankfurt` or `Dallas` and under `Delivery Pipeline` select `New` button to create a new API Key. It fill in the empty slots. Ensure they are correct and finally press the `Create` button. <br/>
 <br/><img src="images/ToolChainSetup.png" alt="ToolChainSetup" width="640" border="10" /><br/><br/>
-An emerging window will ask again for a `Create` selection. Then go ahead and click `Deploy` button. 
+The screen will show an appearance similar to this:
 <br/><br/><img src="images/ToolChainOK.png" alt="ToolChainOK" width="640" border="10" /><br/><br/>
 Press on the `Delivery Pipeline`. A new screen will show the application being compiled and deployed. Once both stages get a green status (`Stage passed`), select the `View Console` small link in the `Deploy Stage`.
 The application console opens. It should show a green status (`Running`) on the top. Ensure that the application
