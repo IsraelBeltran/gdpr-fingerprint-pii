@@ -272,7 +272,7 @@ If you are not already there, open the WKS tool.
 - Ground truth editor opens up. Here you can select each document one by one to annotate all the documents. Click on any of the documents and click `OK` for any Alert message that may pop up.<br/>
 <br/><img src="images/NewWKSGroundTruthFiles.png" alt="NewWKSGroundTruthFiles" width="640" border="10" /><br/><br/>
 - From the documents select an entry that you want to be extracted from the document as entities. Then click on the entity type on the right hand side of the screen
-- Similarly do this for all the entities in the document. Note that the idea is to only annotate "customer names" and "customer companies" and not "agent names" or "telco company".<br/>
+- Similarly do this for all the entities in the document. Note that the idea is to only annotate **"customer names"** and **"customer companies"** and **not** *"agent names"* or *"telco company"*. That is, the type **"Names"** in reality means **"Customer Names"**<br/>
 <br/><img src="images/WKSEntityMapping.png" alt="WKSEntityMapping" width="640" border="10" /><br/><br/>
 - Once all the keywords are mapped to entity types, select `Completed` from the status dropdow.<br/>
 <br/><img src="images/WKSMappingComplete.png" alt="WKSMappingComplete" width="640" border="10" /><br/><br/>
