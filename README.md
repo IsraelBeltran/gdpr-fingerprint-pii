@@ -312,7 +312,7 @@ If you are not already there, open the WKS tool.
 <br/><img src="images/WKSDeployModel.png" alt="WKSDeployModel" width="640" border="10" /><br/><br/>
 - Select your IBM Cloud Region, Resource Group and NLU service instances. Click `Deploy`.<br/>
 <br/><img src="images/WKSDeployNLUIntsance.png" alt="WKSDeployNLUIntsance" width="640" border="10" /><br/><br/>
-- WKS model should get deployed on the NLU. Make a note of the Model Id. Click `OK`.<br/>
+- WKS model should get deployed on the NLU. Take note of the Model Id. You will need it later. Click `OK`.<br/>
 <br/><img src="images/WKSModelId.png" alt="WKSModelId" width="640" border="10" /><br/><br/>
 - Model is deployed to NLU.<br/>
 <br/><img src="images/WKSDeployedSnapshot.png" alt="WKSDeployedSnapshot" width="640" border="10" /><br/><br/>
