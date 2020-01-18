@@ -211,6 +211,12 @@ Once the new screen is shown, select `Manage` at the left, and press the `Launch
 You should reach the following screen.
 <br/><br/><img src="images/WKSEmpty.png" alt="WKSEmpty" width="640" border="10" /><br/><br/>
 
+### 3.3 Deploy Natural Language Understanding (NLU) service in IBM Cloud
+In a similar way as above, press the `Catalog` link on the top bar and navigate to the service catalog.
+Select `AI` in the categories and select `Natural Language Understanding`
+Selected **the same region as above** and ensure the pricing plan is `Lite` and press the `Create` button.
+Once the new screen is shown, the service is deployed. Move to the next step.
+
 ## 4. Develop Watson Knowledge Studio model
 ### 4.1 Concepts
 #### 4.1.1 Type Systems
