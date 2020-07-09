@@ -198,7 +198,7 @@ The screen will show an appearance similar to this:
 <br/><br/><img src="images/ToolChainOK.png" alt="ToolChainOK" width="640" border="10" /><br/><br/>
 Press on the `Delivery Pipeline`. A new screen will show the application being compiled and deployed. Once both stages get a green status (`Stage passed`), select the `View Console` small link in the `Deploy Stage`.
 The application console opens. It should show a green status (`Running`) on the top. Ensure that the application
-is started and that a NLU service is created and bound to the application just deployed. (check similar status as in the following picture)
+is started and that a **NLU service is created and bound** to the application just deployed. (check similar status as in the following picture)
 <br/><br/><img src="images/AppConsoleOK.png" alt="AppConsoleOK" width="640" border="10" /><br/><br/>
 <br/>
 
@@ -211,11 +211,6 @@ Once the new screen is shown, select `Manage` at the left, and press the `Launch
 You should reach the following screen.
 <br/><br/><img src="images/WKSEmpty.png" alt="WKSEmpty" width="640" border="10" /><br/><br/>
 
-### 3.3 Deploy Natural Language Understanding (NLU) service in IBM Cloud
-In a similar way as above, press the `Catalog` link on the top bar and navigate to the service catalog.
-Select `AI` in the categories and select `Natural Language Understanding`
-Selected **the same region as above** and ensure the pricing plan is `Lite` and press the `Create` button.
-Once the new screen is shown, the service is deployed. Move to the next step.
 
 ## 4. Develop Watson Knowledge Studio model
 ### 4.1 Concepts
