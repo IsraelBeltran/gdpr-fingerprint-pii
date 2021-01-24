@@ -192,7 +192,7 @@ Click `Deploy to IBM Cloud` button above to deploy the application to IBM Cloud.
 <br/>[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/jaumemir/gdpr-fingerprint-pii.git)
 
 <br/><br/>It will take some time and may ask you to log in to IBM Cloud if you are not loggedin already. 
-You would be presented with a toolchain view. Check that the selected region is either `London`, `Frankfurt` or `Dallas` and under `Delivery Pipeline` select `New` button to create a new API Key. It fill in the empty slots. Ensure they are correct and finally press the `Create` button. <br/>
+You would be presented with a toolchain view. Check that the selected region is either `London`, `Frankfurt` or `Dallas`. Leave the values provided in `Git Repos and Issue Tracking` tab and click tab `Delivery Pipeline`. There, select `New` button to create a new API Key. It fill in the empty slots. Ensure they are correct and finally press the `Create` button. If `Organization` and `Space` are not automatically populated, try with another region. Always use the same region in all fields. <br/>
 <br/><img src="images/ToolChainSetup.png" alt="ToolChainSetup" width="640" border="10" /><br/><br/>
 The screen will show an appearance similar to this:
 <br/><br/><img src="images/ToolChainOK.png" alt="ToolChainOK" width="640" border="10" /><br/><br/>
